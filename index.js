@@ -13,7 +13,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-const dbURI = "mongodb+srv://nagarajanvijay:nagarajanvijay...>@loan.dsxhura.mongodb.net/?retryWrites=true&w=majority&appName=Loan";
+const dbURI = "mongodb+srv://nagarajanvijay:nagarajanvijay...@loan.dsxhura.mongodb.net/?retryWrites=true&w=majority&appName=Loan";
 
 mongoose.connect(dbURI).then(() => {
      console.log("Connected to MongoDB");
