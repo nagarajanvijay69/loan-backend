@@ -7,10 +7,7 @@ import cron from 'node-cron';
 
 const app = express();
 const PORT = 5000;
-app.use(cors({
-     origin: "https://loan-app-frontend-opal.vercel.app/",
-     credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 
 const dbURI = "mongodb+srv://nagarajanvijay:nagarajanvijay...@loan.dsxhura.mongodb.net/?retryWrites=true&w=majority&appName=Loan";
