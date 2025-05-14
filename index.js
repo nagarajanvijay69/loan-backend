@@ -34,6 +34,7 @@ app.post("/users", async (req, res) => {
           const totalAmountInterest = ((Principle * interest) / 100) + Principle;
           user.totalAmountInterest = totalAmountInterest;
           user.willPayNow = totalAmountInterest - user.paidNow;
+          user.monthlyPayment = totalAmountInterest / user.duration;
           console.log(user);
           await UserModel.create(user);
           res.status(201).json({ message: "User created successfully" });
